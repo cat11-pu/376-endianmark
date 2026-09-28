@@ -1,8 +1,16 @@
-// bytes.js：标记与取值（基线：一律给负一与零）
+// bytes.js：字节序标记与四字节取值（原生 API）
 export function markOf(hex) {
+  const mark = parseInt(String(hex).slice(0, 2), 16);
+  if (mark === 0) return 0;
+  if (mark === 1) return 1;
   return -1;
 }
 
 export function valueOf(hex, mark) {
-  return 0;
+  const payload = String(hex).slice(2, 10);
+  if (mark === 1) {
+    const swapped = payload.match(/../g).reverse().join("");
+    return parseInt(swapped, 16);
+  }
+  return parseInt(payload, 16);
 }
