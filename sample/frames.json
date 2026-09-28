@@ -1,0 +1,14 @@
+{
+  "budget": 2,
+  "bad_mark_code": "E_BAD_MARK",
+  "bad_len_code": "E_BAD_LEN",
+  "bad_hex_code": "E_BAD_HEX",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "records": [], "big": 0, "small": 0, "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "frame", "hex": "0000000100" },
+    { "id": 2, "kind": "frame", "hex": "0100000100" },
+    { "id": 3, "kind": "frame", "hex": "00000000ff" },
+    { "id": 4, "kind": "frame", "hex": "0100000001" }
+  ]
+}
